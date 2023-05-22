@@ -1,0 +1,717 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TopBar = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Straight = Instance.new("Frame")
+local C = Instance.new("TextLabel")
+local H = Instance.new("TextLabel")
+local Minimize = Instance.new("ImageButton")
+local ColorLine = Instance.new("Frame")
+local Sidebar = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local lineartop = Instance.new("Frame")
+local linearside = Instance.new("Frame")
+local PlayerScroll = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local UIPadding = Instance.new("UIPadding")
+local ColorLine_2 = Instance.new("Frame")
+local Center = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner_4 = Instance.new("UICorner")
+local UIPadding_2 = Instance.new("UIPadding")
+local TextLabel = Instance.new("TextLabel")
+local CenterHolder = Instance.new("Frame")
+local highlight = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local UIGridLayout = Instance.new("UIGridLayout")
+local UIPadding_3 = Instance.new("UIPadding")
+local MeshlessHatTP = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local ViewPlayer = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local TP = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local HatTP = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local Tool2Player = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local BringPlayer = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local KillPlayer = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local UIStroke_2 = Instance.new("UIStroke")
+local UIStroke_3 = Instance.new("UIStroke")
+local UIStroke_4 = Instance.new("UIStroke")
+local UIStroke_5 = Instance.new("UIStroke")
+local UIStroke_6 = Instance.new("UIStroke")
+local UIStroke_7 = Instance.new("UIStroke")
+local UIStroke_8 = Instance.new("UIStroke")
+local UIStroke_9 = Instance.new("UIStroke")
+local UIStroke_10 = Instance.new("UIStroke")
+
+--Properties:
+
+ScreenGui.Parent = game:GetService("CoreGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainFrame.Name = "Main Frame"
+MainFrame.Parent = ScreenGui
+MainFrame.Active = true
+MainFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+MainFrame.ClipsDescendants = true
+MainFrame.Position = UDim2.new(0.320916921, 0, 0.312967598, 0)
+MainFrame.Size = UDim2.new(0, 500, 0, 300)
+
+UICorner.Parent = MainFrame
+
+TopBar.Name = "Top Bar"
+TopBar.Parent = MainFrame
+TopBar.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+TopBar.Size = UDim2.new(0, 500, 0, 40)
+TopBar.ZIndex = 2
+
+UICorner_2.Parent = TopBar
+
+Straight.Name = "Straight"
+Straight.Parent = TopBar
+Straight.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+Straight.BorderSizePixel = 0
+Straight.Position = UDim2.new(0, 0, 0.200000003, 0)
+Straight.Size = UDim2.new(0, 500, 0, 32)
+Straight.ZIndex = 0
+
+C.Name = "C"
+C.Parent = TopBar
+C.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+C.BackgroundTransparency = 1.000
+C.Position = UDim2.new(0.0140000004, 0, 0.174999997, 0)
+C.Size = UDim2.new(0, 24, 0, 25)
+C.Font = Enum.Font.ArialBold
+C.Text = "C"
+C.TextColor3 = Color3.fromRGB(255, 255, 255)
+C.TextScaled = true
+C.TextSize = 40.000
+C.TextStrokeTransparency = 10.000
+C.TextWrapped = true
+
+UIStroke.Parent = C
+
+H.Name = "H"
+H.Parent = TopBar
+H.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+H.BackgroundTransparency = 1.000
+H.Position = UDim2.new(0.0399999991, 0, 0.174999997, 0)
+H.Size = UDim2.new(0, 24, 0, 25)
+H.Font = Enum.Font.ArialBold
+H.Text = "H"
+H.TextColor3 = Color3.fromRGB(255, 0, 0)
+H.TextScaled = true
+H.TextSize = 40.000
+H.TextStrokeTransparency = 10.000
+H.TextWrapped = true
+
+UIStroke_2.Parent = H
+
+Minimize.Name = "Minimize"
+Minimize.Parent = TopBar
+Minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.BackgroundTransparency = 1.000
+Minimize.Position = UDim2.new(0.93599999, 0, 0.174999997, 0)
+Minimize.Size = UDim2.new(0, 25, 0, 25)
+Minimize.Image = "rbxassetid://2777726146"
+Minimize.ImageColor3 = Color3.fromRGB(255, 0, 0)
+
+ColorLine.Name = "Color Line"
+ColorLine.Parent = TopBar
+ColorLine.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
+ColorLine.BorderColor3 = Color3.fromRGB(200, 0, 0)
+ColorLine.Position = UDim2.new(0, 0, 0.950000048, 0)
+ColorLine.Size = UDim2.new(0, 500, 0, 2)
+ColorLine.ZIndex = 3
+
+Sidebar.Name = "Side bar"
+Sidebar.Parent = MainFrame
+Sidebar.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+Sidebar.Position = UDim2.new(0, 0, 0.13333334, 0)
+Sidebar.Size = UDim2.new(0, 100, 0, 260)
+
+UICorner_3.Parent = Sidebar
+
+lineartop.Name = "linear top"
+lineartop.Parent = Sidebar
+lineartop.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+lineartop.BorderSizePixel = 0
+lineartop.Size = UDim2.new(0, 100, 0, 7)
+
+linearside.Name = "linear side"
+linearside.Parent = Sidebar
+linearside.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+linearside.BorderSizePixel = 0
+linearside.Position = UDim2.new(0.930000007, 0, 0.0269230772, 0)
+linearside.Size = UDim2.new(0, 7, 0, 253)
+
+PlayerScroll.Name = "Player Scroll"
+PlayerScroll.Parent = Sidebar
+PlayerScroll.Active = true
+PlayerScroll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerScroll.BackgroundTransparency = 1.000
+PlayerScroll.Size = UDim2.new(0, 100, 0, 260)
+PlayerScroll.CanvasSize = UDim2.new(0, 0, 20, 0)
+PlayerScroll.ScrollBarImageTransparency = 1
+
+UIListLayout.Parent = PlayerScroll
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 2)
+
+UIPadding.Parent = PlayerScroll
+UIPadding.PaddingTop = UDim.new(0, 5)
+
+ColorLine_2.Name = "Color Line"
+ColorLine_2.Parent = Sidebar
+ColorLine_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ColorLine_2.BorderColor3 = Color3.fromRGB(200, 0, 0)
+ColorLine_2.Position = UDim2.new(1, 0, 0, 0)
+ColorLine_2.Size = UDim2.new(0, 0, 0, 260)
+ColorLine_2.ZIndex = 3
+
+Center.Name = "Center"
+Center.Parent = MainFrame
+Center.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Center.BackgroundTransparency = 1.000
+Center.Position = UDim2.new(0.200000003, 0, 0.13333334, 0)
+Center.Size = UDim2.new(0, 400, 0, 260)
+
+ImageLabel.Parent = Center
+ImageLabel.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+ImageLabel.Size = UDim2.new(0, 50, 0, 50)
+ImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+UICorner_4.CornerRadius = UDim.new(1, 1)
+UICorner_4.Parent = ImageLabel
+
+UIPadding_2.Parent = Center
+UIPadding_2.PaddingLeft = UDim.new(0, 5)
+UIPadding_2.PaddingTop = UDim.new(0, 5)
+
+TextLabel.Parent = Center
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.151898727, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 65, 0, 50)
+TextLabel.Font = Enum.Font.Unknown
+TextLabel.Text = "Player Name"
+TextLabel.TextColor3 = Color3.fromRGB(191, 191, 191)
+TextLabel.TextSize = 14.000
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+CenterHolder.Name = "Center Holder"
+CenterHolder.Parent = Center
+CenterHolder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CenterHolder.BackgroundTransparency = 1.000
+CenterHolder.Position = UDim2.new(0, 0, 0.196078435, 0)
+CenterHolder.Size = UDim2.new(0, 388, 0, 205)
+
+highlight.Name = "highlight"
+highlight.Parent = CenterHolder
+highlight.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+highlight.Position = UDim2.new(0, 0, 0.0971045792, 0)
+highlight.Size = UDim2.new(0, 87, 0, 25)
+highlight.Font = Enum.Font.Unknown
+highlight.Text = "Highlight Player"
+highlight.TextColor3 = Color3.fromRGB(191, 191, 191)
+highlight.TextSize = 10.000
+highlight.TextWrapped = true
+
+
+UIStroke_3.Parent = highlight
+UIStroke_3.Color = Color3.fromRGB(200,0,0)
+UIStroke_3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+UICorner_5.CornerRadius = UDim.new(0, 4)
+UICorner_5.Parent = highlight
+
+UIGridLayout.Parent = CenterHolder
+UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellPadding = UDim2.new(0, 20, 0, 5)
+UIGridLayout.CellSize = UDim2.new(0, 100, 0, 20)
+
+UIPadding_3.Parent = CenterHolder
+UIPadding_3.PaddingBottom = UDim.new(0, 15)
+UIPadding_3.PaddingLeft = UDim.new(0, 5)
+UIPadding_3.PaddingRight = UDim.new(0, 5)
+UIPadding_3.PaddingTop = UDim.new(0, 15)
+
+MeshlessHatTP.Name = "Meshless Hat TP"
+MeshlessHatTP.Parent = CenterHolder
+MeshlessHatTP.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+MeshlessHatTP.Position = UDim2.new(0, 0, 0.0971045792, 0)
+MeshlessHatTP.Size = UDim2.new(0, 87, 0, 25)
+MeshlessHatTP.Font = Enum.Font.Unknown
+MeshlessHatTP.Text = "Meshless 2 Player"
+MeshlessHatTP.TextColor3 = Color3.fromRGB(191, 191, 191)
+MeshlessHatTP.TextSize = 10.000
+MeshlessHatTP.TextWrapped = true
+
+UIStroke_4.Parent = MeshlessHatTP
+UIStroke_4.Color = Color3.fromRGB(200,0,0)
+UIStroke_4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+UICorner_6.CornerRadius = UDim.new(0, 4)
+UICorner_6.Parent = MeshlessHatTP
+
+ViewPlayer.Name = "View Player"
+ViewPlayer.Parent = CenterHolder
+ViewPlayer.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+ViewPlayer.Position = UDim2.new(0, 0, 0.0971045792, 0)
+ViewPlayer.Size = UDim2.new(0, 87, 0, 25)
+ViewPlayer.Font = Enum.Font.Unknown
+ViewPlayer.Text = "View Player"
+ViewPlayer.TextColor3 = Color3.fromRGB(191, 191, 191)
+ViewPlayer.TextSize = 10.000
+ViewPlayer.TextWrapped = true
+
+UIStroke_5.Parent = ViewPlayer
+UIStroke_5.Color = Color3.fromRGB(200,0,0)
+UIStroke_5.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+UICorner_7.CornerRadius = UDim.new(0, 4)
+UICorner_7.Parent = ViewPlayer
+
+TP.Name = "TP"
+TP.Parent = CenterHolder
+TP.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+TP.Position = UDim2.new(0, 0, 0.0971045792, 0)
+TP.Size = UDim2.new(0, 87, 0, 25)
+TP.Font = Enum.Font.Unknown
+TP.Text = "TP 2 Player"
+TP.TextColor3 = Color3.fromRGB(191, 191, 191)
+TP.TextSize = 10.000
+TP.TextWrapped = true
+
+UIStroke_6.Parent = TP
+UIStroke_6.Color = Color3.fromRGB(200,0,0)
+UIStroke_6.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+UICorner_8.CornerRadius = UDim.new(0, 4)
+UICorner_8.Parent = TP
+
+HatTP.Name = "Hat TP"
+HatTP.Parent = CenterHolder
+HatTP.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+HatTP.Position = UDim2.new(0, 0, 0.0971045792, 0)
+HatTP.Size = UDim2.new(0, 87, 0, 25)
+HatTP.Font = Enum.Font.Unknown
+HatTP.Text = "Hat 2 Player (Mesh)"
+HatTP.TextColor3 = Color3.fromRGB(191, 191, 191)
+HatTP.TextSize = 10.000
+HatTP.TextWrapped = true
+
+UIStroke_7.Parent = HatTP
+UIStroke_7.Color = Color3.fromRGB(200,0,0)
+UIStroke_7.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+UICorner_9.CornerRadius = UDim.new(0, 4)
+UICorner_9.Parent = HatTP
+
+Tool2Player.Name = "Tool 2 Player"
+Tool2Player.Parent = CenterHolder
+Tool2Player.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+Tool2Player.Position = UDim2.new(0, 0, 0.0971045792, 0)
+Tool2Player.Size = UDim2.new(0, 87, 0, 25)
+Tool2Player.Font = Enum.Font.Unknown
+Tool2Player.Text = "Tool 2 Player"
+Tool2Player.TextColor3 = Color3.fromRGB(191, 191, 191)
+Tool2Player.TextSize = 10.000
+Tool2Player.TextWrapped = true
+
+UIStroke_8.Parent = Tool2Player
+UIStroke_8.Color = Color3.fromRGB(200,0,0)
+UIStroke_8.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+UICorner_10.CornerRadius = UDim.new(0, 4)
+UICorner_10.Parent = Tool2Player
+
+BringPlayer.Name = "Bring Player"
+BringPlayer.Parent = CenterHolder
+BringPlayer.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+BringPlayer.Position = UDim2.new(0, 0, 0.0971045792, 0)
+BringPlayer.Size = UDim2.new(0, 87, 0, 25)
+BringPlayer.Font = Enum.Font.Unknown
+BringPlayer.Text = "Bring Player"
+BringPlayer.TextColor3 = Color3.fromRGB(191, 191, 191)
+BringPlayer.TextSize = 10.000
+BringPlayer.TextWrapped = true
+
+UIStroke_9.Parent = BringPlayer
+UIStroke_9.Color = Color3.fromRGB(200,0,0)
+UIStroke_9.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+UICorner_11.CornerRadius = UDim.new(0, 4)
+UICorner_11.Parent = BringPlayer
+
+KillPlayer.Name = "Kill Player"
+KillPlayer.Parent = CenterHolder
+KillPlayer.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+KillPlayer.Position = UDim2.new(0, 0, 0.0971045792, 0)
+KillPlayer.Size = UDim2.new(0, 87, 0, 25)
+KillPlayer.Font = Enum.Font.Unknown
+KillPlayer.Text = "Kill Player"
+KillPlayer.TextColor3 = Color3.fromRGB(191, 191, 191)
+KillPlayer.TextSize = 10.000
+KillPlayer.TextWrapped = true
+
+UIStroke_10.Parent = KillPlayer
+UIStroke_10.Color = Color3.fromRGB(200,0,0)
+UIStroke_10.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+UICorner_12.CornerRadius = UDim.new(0, 4)
+UICorner_12.Parent = KillPlayer
+
+TextButton.Parent = ScreenGui
+TextButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TextButton.Size = UDim2.new(0, 87, 0, 25)
+TextButton.Visible = false
+TextButton.Font = Enum.Font.Unknown
+TextButton.Text = "ExamplePlayer Name"
+TextButton.TextColor3 = Color3.fromRGB(191, 191, 191)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+UICorner_13.CornerRadius = UDim.new(0, 4)
+UICorner_13.Parent = TextButton
+
+-- Scripts:
+
+local function ZCHPI_fake_script() -- Minimize.LocalScript 
+	local script = Instance.new('LocalScript', Minimize)
+
+	local main_frame = script.Parent.Parent.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if main_frame.Size.Height.Offset == 300 then
+			main_frame:TweenSize(UDim2.new(0,500,0,40), Enum.EasingDirection.In, Enum.EasingStyle.Quad, .5)
+		elseif main_frame.Size.Height.Offset == 40 then
+			main_frame:TweenSize(UDim2.new(0,500,0,300), Enum.EasingDirection.In, Enum.EasingStyle.Quad, .5)
+		end
+	end)
+end
+coroutine.wrap(ZCHPI_fake_script)()
+local function AGGSVCF_fake_script() -- MainFrame.Draggability 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	script.Parent.Draggable = true
+end
+coroutine.wrap(AGGSVCF_fake_script)()
+local function UTZRP_fake_script() -- highlight.LocalScript 
+	local script = Instance.new('LocalScript', highlight)
+
+	Enabled = false
+	local Folder = Instance.new("Folder")
+	Folder.Parent = game:GetService("CoreGui")
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if Enabled == false then
+			local Highlight = Instance.new("Highlight")
+			Highlight.Parent = Folder
+			Highlight.Name = _G.Player.Name
+			Highlight.Adornee = _G.Player.Character
+			Enabled = true
+		else
+			for Index,Player in pairs(game:GetService("CoreGui").Folder:GetChildren()) do
+				Player:Destroy()
+			end
+			Enabled = false
+		end
+	end)
+end
+coroutine.wrap(UTZRP_fake_script)()
+local function VPUKKX_fake_script() -- MeshlessHatTP.LocalScript 
+	local script = Instance.new('LocalScript', MeshlessHatTP)
+
+	local Toggle = false
+	
+	local function Config(Part)
+		Part.AccessoryWeld:Destroy()
+		Part.CanCollide = false
+		if Part:FindFirstChild("Mesh") then
+			Part:FindFirstChild("Mesh"):Destroy()
+		elseif Part:FindFirstChild("SpecialMesh") then
+			Part:FindFirstChild("SpecialMesh"):Destroy()
+		end
+		Part.Parent = game.Players.LocalPlayer.Character
+	end
+	
+	local function CoFunc(Part)
+		while true do
+			task.wait()
+			Part.CFrame = _G.Player.Character.Head.CFrame
+			Part.RotVelocity = Vector3.new(10000, 10000, 10000)
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for _,object in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+			if object.ClassName == "Part" or object.ClassName == "MeshPart" then
+				if object.Parent.ClassName == "Accessory" then
+					Config(object)
+					local co = coroutine.create(CoFunc(object))
+					coroutine.resume(co)
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(VPUKKX_fake_script)()
+local function KAVR_fake_script() -- ViewPlayer.LocalScript 
+	local script = Instance.new('LocalScript', ViewPlayer)
+
+	local Toggle = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if Toggle == false then
+			workspace.Camera.CameraSubject = _G.Player.Character.Humanoid
+			Toggle = true
+		else 
+			workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
+			Toggle = false
+		end
+	end)
+end
+coroutine.wrap(KAVR_fake_script)()
+local function PRAUYQ_fake_script() -- TP.LocalScript 
+	local script = Instance.new('LocalScript', TP)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		print("Teleport Executed")
+		if _G.Player.Character:FindFirstChild("HumanoidRootPart") then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = _G.Player.Character.HumanoidRootPart.CFrame
+		end
+	end)
+end
+coroutine.wrap(PRAUYQ_fake_script)()
+local function YRHFLO_fake_script() -- HatTP.LocalScript 
+	local script = Instance.new('LocalScript', HatTP)
+
+	local Toggle = false
+	
+	local function Config(Part)
+		Part.AccessoryWeld:Destroy()
+		Part.CanCollide = false
+		Part.Parent = game.Players.LocalPlayer.Character
+	end
+	
+	local function CoFunc(Part)
+		while true do
+			task.wait()
+			Part.CFrame = _G.Player.Character.Head.CFrame * CFrame.new(0,.15,-.15)
+			Part.RotVelocity = Vector3.new(10000, 10000, 10000)
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+			if v.ClassName == "Part" or v.ClassName == "MeshPart" then
+				if v.Parent.ClassName == "Accessory" then
+					Config(v)
+					local co = coroutine.create(CoFunc(v))
+					coroutine.resume(co)
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(YRHFLO_fake_script)()
+local function EWUTL_fake_script() -- Tool2Player.LocalScript 
+	local script = Instance.new('LocalScript', Tool2Player)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local function Config(Part)
+			Part.CanCollide = false
+			if game.Players.LocalPlayer.Character:FindFirstChild("Right Arm") then
+				game.Players.LocalPlayer.Character["Right Arm"]:FindFirstChild("RightGrip"):Destroy()
+			else
+				game.Players.LocalPlayer.Character["RightHand"]:FindFirstChild("RightGrip"):Destroy()
+			end
+		end
+	
+		local function CoFunc(Part)
+			while true do
+				task.wait()
+				Part.CFrame = _G.Player.Character.Head.CFrame * CFrame.new(0,1.3,0)
+				Part.RotVelocity = Vector3.new(10000, 10000, 10000)
+			end
+		end
+	
+		for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+			if v.ClassName == "Part" then
+				if v.Parent.ClassName == "Tool" then
+					Config(v)
+					local co = coroutine.create(CoFunc(v))
+					coroutine.resume(co)
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(EWUTL_fake_script)()
+local function ICIBE_fake_script() -- BringPlayer.LocalScript 
+	local script = Instance.new('LocalScript', BringPlayer)
+
+	local Plr = game.Players.LocalPlayer.Character
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool") then
+			local Pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			local h = game.Players.LocalPlayer.Character.Humanoid:Clone()
+			local plr = game.Players.LocalPlayer.Character
+			local CF = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			local lp = game.Players.LocalPlayer
+	
+			h.Parent = game.Players.LocalPlayer.Character
+			h.Name = "Hum"
+	
+			game.Players.LocalPlayer.Character.Humanoid:Destroy()
+	
+			for _,v in pairs(lp:GetDescendants()) do
+				if v.ClassName == "Tool" then
+					v.Parent = plr
+				end
+			end
+	
+			if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):FindFirstChildOfClass("Part") then
+				firetouchinterest(game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):FindFirstChildOfClass("Part"), _G.Player.Character.HumanoidRootPart, 0)
+			else
+				firetouchinterest(game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):FindFirstChildOfClass("MeshPart"), _G.Player.Character.HumanoidRootPart, 0)
+			end
+		else
+			print("This Script Needs Tools")
+		end
+	end)
+end
+coroutine.wrap(ICIBE_fake_script)()
+local function LSAUOLL_fake_script() -- KillPlayer.LocalScript 
+	local script = Instance.new('LocalScript', KillPlayer)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		if game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool") then
+			local h = game.Players.LocalPlayer.Character.Humanoid:Clone()
+			local plr = game.Players.LocalPlayer.Character
+			local CF = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			local lp = game.Players.LocalPlayer
+	
+			h.Parent = game.Players.LocalPlayer.Character
+			h.Name = "Hum"
+	
+			game.Players.LocalPlayer.Character.Humanoid:Destroy()
+	
+			for _,v in pairs(lp:GetDescendants()) do
+				if v.ClassName == "Tool" then
+					v.Parent = plr
+				end
+			end
+	
+			if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):FindFirstChildOfClass("Part") then
+				firetouchinterest(game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):FindFirstChildOfClass("Part"), _G.Player.Character.HumanoidRootPart, 0)
+			else
+				firetouchinterest(game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):FindFirstChildOfClass("MeshPart"), _G.Player.Character.HumanoidRootPart, 0)
+			end
+	
+			plr.HumanoidRootPart.CFrame = CFrame.new(0,-100, 0)
+		else
+			print("This Script Needs Tools")
+		end
+	end)
+end
+coroutine.wrap(LSAUOLL_fake_script)()
+local function VNMBLI_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	_G.Player = game.Players.LocalPlayer
+	UIS = game:GetService("UserInputService")
+	
+	local function connect()
+		for _,bttn in pairs(game:GetService("CoreGui").ScreenGui["Main Frame"]["Side bar"]["Player Scroll"]:GetChildren()) do
+			if bttn:IsA("TextButton") then
+				bttn.MouseButton1Click:Connect(function()
+					_G.Player = game:GetService("Players")[bttn.Name]
+				end)
+			end
+		end
+	end
+	
+	local function Click(Instance)
+		if Instance.Parent:FindFirstChildOfClass("Humanoid") then
+			_G.Player = game.Players[Instance.Parent.Name]
+		end
+		
+		if Instance.Parent.Parent:FindFirstChildOfClass("Humanoid") then
+			_G.Player = game.Players[Instance.Parent.Name]
+		end
+	end
+	
+	for _,player in pairs(game:GetService("Players"):GetPlayers()) do
+		clone = game:GetService("CoreGui").ScreenGui.TextButton:Clone()
+		clone.Parent = game:GetService("CoreGui").ScreenGui["Main Frame"]["Side bar"]["Player Scroll"]
+		clone.Name = player.Name
+		clone.Text = player.Name
+		clone.Visible = true
+		connect()
+	end
+	
+	game.Players.PlayerAdded:Connect(function(player)
+		clone = game:GetService("CoreGui").ScreenGui.TextButton:Clone()
+		clone.Parent = game:GetService("CoreGui").ScreenGui["Main Frame"]["Side bar"]["Player Scroll"]
+		clone.Name = player.Name
+		clone.Text = player.Name
+		clone.Visible = true
+		connect()
+	end)
+	
+	game.Players.PlayerRemoving:Connect(function(player)
+		game:GetService("CoreGui").ScreenGui["Main Frame"]["Side bar"]["Player Scroll"]:FindFirstChild(player.Name):Destroy()
+	end)
+	
+	local Text = coroutine.create(function()
+		while true do
+			if _G.Player.Name ~= nil then
+				game:GetService("CoreGui").ScreenGui["Main Frame"].Center.TextLabel.Text = _G.Player.Name
+				wait()
+			end
+		end
+	end)
+	
+	coroutine.resume(Text)
+	
+	local Image = coroutine.create(function()
+		while true do 
+			if _G.Player.Name ~= nil then
+				game:GetService("CoreGui").ScreenGui["Main Frame"].Center.ImageLabel.Image = game:GetService("Players"):GetUserThumbnailAsync(_G.Player.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size100x100)
+				wait()
+			end
+		end
+	end)
+	
+	coroutine.resume(Image)
+	
+	UIS.InputBegan:Connect(function(key)
+		if key.UserInputType == Enum.UserInputType.MouseButton1 then
+			local target = game.Players.LocalPlayer:GetMouse().Target
+			Click(target)
+			print(target.Name)
+		end
+	end)
+	
+end
+coroutine.wrap(VNMBLI_fake_script)()
