@@ -1,4 +1,4 @@
-local key = "E" --key to intiate the flashback. see https://create.roblox.com/docs/reference/engine/enums/KeyCode for an exhaustive list
+local key = "Q" --key to intiate the flashback. see https://create.roblox.com/docs/reference/engine/enums/KeyCode for an exhaustive list
 local flashbacklength = 60 --how long the flashback should be stored in approx seconds
 local flashbackspeed = 1 --how many frames to skip during flashback (set to 0 to disable)
 
