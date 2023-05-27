@@ -1,0 +1,497 @@
+local main = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Frame2 = Instance.new("Frame")
+local Dash = Instance.new("TextButton")
+local StopDash = Instance.new("TextButton")
+local More = Instance.new("TextButton")
+local More2 = Instance.new("TextButton")
+local Low = Instance.new("TextButton")
+local Low2 = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel2 = Instance.new("TextLabel")
+local TextLabel3 = Instance.new("TextLabel")
+local TextLabel4 = Instance.new("TextLabel")
+local EndTime = Instance.new("TextBox")
+local DashPower = Instance.new("TextBox")
+local RemoveGui = Instance.new("TextButton")
+local RemoveGui2 = Instance.new("TextButton")
+local Style = Instance.new("TextButton")
+local Camera = Instance.new("TextButton")
+local Humanoid = Instance.new("TextButton")
+local COOLDASH = Instance.new("TextButton")
+local SizeNumber1 = Instance.new("TextBox")
+local SizeNumber2 = Instance.new("TextBox")
+local SizeNumber3 = Instance.new("TextBox")
+local SizeNumber4 = Instance.new("TextBox")
+local SetSize = Instance.new("TextButton")
+local SetSize2 = Instance.new("TextButton")
+local Draggable = Instance.new("TextButton")
+local Draggable2 = Instance.new("TextButton")
+local Reset = Instance.new("TextButton")
+local Reset2 = Instance.new("TextButton")
+
+main.Name = "Dash"
+main.Parent = game.CoreGui
+
+Frame.Name = "SettingFrame"
+Frame.Parent = main
+Frame.Size = UDim2.new(0, 300, 0, 360)
+Frame.Position = UDim2.new(0, 100, 0, 70)
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Visible = false
+Frame.BackgroundTransparency = 0.5
+Frame.Active = true
+Frame.Draggable = true
+
+Frame2.Name = "SettingFrame2"
+Frame2.Parent = main
+Frame2.Size = UDim2.new(0, 300, 0, 210)
+Frame2.Position = UDim2.new(0, 100, 0, 70)
+Frame2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame2.Visible = false
+Frame2.BackgroundTransparency = 0.5
+Frame2.Active = true
+Frame2.Draggable = true
+
+Dash.Name = "Dash"
+Dash.Parent = main
+Dash.Size = UDim2.new(0, 100, 0, 100)
+Dash.Position = UDim2.new(0, 220, 0, 100)
+Dash.Text = "Dash"
+Dash.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Dash.TextColor3 = Color3.fromRGB(255, 255, 255)
+Dash.TextSize = 25
+Dash.BackgroundTransparency = 0.7
+Dash.Draggable = true
+Dash.MouseButton1Up:Connect(function()
+            if Style.Text == "CoolDash" then
+		local BV = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character.HumanoidRootPart)
+		local BG = Instance.new("BodyGyro",game.Players.LocalPlayer.Character.HumanoidRootPart)
+		BG.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
+		BG.D = 0
+		BG.P = 0
+		BG.CFrame = game.Workspace.CurrentCamera.CFrame
+		BV.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+		BV.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.LookVector * DashPower.Text
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, -2, 0)
+		game.Players.LocalPlayer.Character.Humanoid.Sit = true
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.Angles(0.75, 0, 0)
+wait(EndTime.Text)
+		game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildOfClass("BodyVelocity"):Destroy()
+		game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildOfClass("BodyGyro"):Destroy()
+		local BV = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character.HumanoidRootPart)
+		local BG = Instance.new("BodyGyro",game.Players.LocalPlayer.Character.HumanoidRootPart)
+		game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildOfClass("BodyVelocity"):Destroy()
+		game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildOfClass("BodyGyro"):Destroy()
+game.Players.LocalPlayer.Character.Humanoid.Sit = false
+		else
+if Style.Text == "Camera" then
+		local BV = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character.HumanoidRootPart)
+		local BG = Instance.new("BodyGyro",game.Players.LocalPlayer.Character.HumanoidRootPart)
+		BG.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
+		BG.D = 0
+		BG.P = 0
+		BG.CFrame = game.Workspace.CurrentCamera.CFrame
+		BV.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+		BV.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * DashPower.Text
+wait(EndTime.Text)
+		game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildOfClass("BodyVelocity"):Destroy()
+		game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildOfClass("BodyGyro"):Destroy()
+		local BV = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character.HumanoidRootPart)
+		local BG = Instance.new("BodyGyro",game.Players.LocalPlayer.Character.HumanoidRootPart)
+		game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildOfClass("BodyVelocity"):Destroy()
+		game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildOfClass("BodyGyro"):Destroy()
+else
+if Style.Text == "Humanoid" then
+		local BV = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character.HumanoidRootPart)
+		local BG = Instance.new("BodyGyro",game.Players.LocalPlayer.Character.HumanoidRootPart)
+		BG.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
+		BG.D = 0
+		BG.P = 0
+		BG.CFrame = game.Workspace.CurrentCamera.CFrame
+		BV.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+		BV.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.LookVector * DashPower.Text
+wait(EndTime.Text)
+		game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildOfClass("BodyVelocity"):Destroy()
+		game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildOfClass("BodyGyro"):Destroy()
+		local BV = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character.HumanoidRootPart)
+		local BG = Instance.new("BodyGyro",game.Players.LocalPlayer.Character.HumanoidRootPart)
+		game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildOfClass("BodyVelocity"):Destroy()
+		game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildOfClass("BodyGyro"):Destroy()
+		end
+end
+end
+end)
+
+StopDash.Name = "StopDash"
+StopDash.Parent = main
+StopDash.Size = UDim2.new(0, 100, 0, 100)
+StopDash.Position = UDim2.new(0, 100, 0, 100)
+StopDash.Text = "StopDash"
+StopDash.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+StopDash.TextColor3 = Color3.fromRGB(255, 0, 0)
+StopDash.TextSize = 17
+StopDash.Visible = true
+StopDash.Draggable = true
+StopDash.BackgroundTransparency = 0.7
+StopDash.MouseButton1Down:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildOfClass("BodyVelocity"):Destroy()
+		game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildOfClass("BodyGyro"):Destroy()
+		local BV = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character.HumanoidRootPart)
+		local BG = Instance.new("BodyGyro",game.Players.LocalPlayer.Character.HumanoidRootPart)
+		game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildOfClass("BodyVelocity"):Destroy()
+		game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChildOfClass("BodyGyro"):Destroy()
+game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end)
+
+Draggable.Name = "Draggable"
+Draggable.Parent = Frame
+Draggable.Size = UDim2.new(0, 100, 0, 40)
+Draggable.Position = UDim2.new(0, 190, 0, 140)
+Draggable.Text = "Drag (On)"
+Draggable.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Draggable.TextColor3 = Color3.fromRGB(0, 255, 0)
+Draggable.TextSize = 16
+Draggable.Visible = true
+Draggable.MouseButton1Down:Connect(function()
+if Draggable.Text == "Drag (On)" then
+Draggable.Text = "Drag (Off)"
+Draggable.TextColor3 = Color3.fromRGB(255,0,0)
+Dash.Draggable = false
+else
+if Draggable.Text == "Drag (Off)" then
+Draggable.Text = "Drag (On)"
+Draggable.TextColor3 = Color3.fromRGB(0,255,0)
+Dash.Draggable = true
+end
+end
+end)
+
+Draggable2.Name = "Draggable2"
+Draggable2.Parent = Frame2
+Draggable2.Size = UDim2.new(0, 100, 0, 40)
+Draggable2.Position = UDim2.new(0, 190, 0, 50)
+Draggable2.Text = "Drag (On)"
+Draggable2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Draggable2.TextColor3 = Color3.fromRGB(0, 255, 0)
+Draggable2.TextSize = 16
+Draggable2.Visible = true
+Draggable2.MouseButton1Down:Connect(function()
+if Draggable2.Text == "Drag (On)" then
+Draggable2.Text = "Drag (Off)"
+Draggable2.TextColor3 = Color3.fromRGB(255,0,0)
+StopDash.Draggable = false
+else
+if Draggable2.Text == "Drag (Off)" then
+Draggable2.Text = "Drag (On)"
+Draggable2.TextColor3 = Color3.fromRGB(0,255,0)
+StopDash.Draggable = true
+end
+end
+end)
+
+Reset.Name = "Reset"
+Reset.Parent = Frame
+Reset.Size = UDim2.new(0, 100, 0, 40)
+Reset.Position = UDim2.new(0, 10, 0, 310)
+Reset.Text = "Reset"
+Reset.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Reset.TextColor3 = Color3.fromRGB(255, 255, 255)
+Reset.TextSize = 20
+Reset.Visible = true
+Reset.MouseButton1Down:Connect(function()
+EndTime.Text = "0.3"
+DashPower.Text = "60"
+Dash.Size = UDim2.new(0,100,0,100)
+Dash.Position = UDim2.new(0,100,0,100)
+end)
+
+Reset2.Name = "Reset2"
+Reset2.Parent = Frame2
+Reset2.Size = UDim2.new(0, 100, 0, 40)
+Reset2.Position = UDim2.new(0, 190,0,100)
+Reset2.Text = "Reset"
+Reset2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Reset2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Reset2.TextSize = 20
+Reset2.Visible = true
+Reset2.MouseButton1Down:Connect(function()
+StopDash.Size = UDim2.new(0,100,0,100)
+StopDash.Position = UDim2.new(0,100,0,100)
+end)
+
+More.Name = "Setting"
+More.Parent = Dash
+More.Size = UDim2.new(0, 30, 0, 30)
+More.Position = UDim2.new(0, 100, 0, 0)
+More.Text = "⚙️"
+More.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+More.TextColor3 = Color3.fromRGB(255, 255, 255)
+More.TextSize = 20
+More.BackgroundTransparency = 0
+More.MouseButton1Down:Connect(function()
+Frame.Visible = true
+end)
+
+More2.Name = "Setting2"
+More2.Parent = StopDash
+More2.Size = UDim2.new(0, 30, 0, 30)
+More2.Position = UDim2.new(0, 100, 0, 0)
+More2.Text = "⚙️"
+More2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+More2.TextColor3 = Color3.fromRGB(0, 0, 0)
+More2.TextSize = 20
+More2.BackgroundTransparency = 0
+More2.MouseButton1Down:Connect(function()
+Frame2.Visible = true
+end)
+
+Low.Name = "Low"
+Low.Parent = Frame
+Low.Size = UDim2.new(0, 40, 0, 40)
+Low.Position = UDim2.new(0, 0, 0, 0)
+Low.Text = "-"
+Low.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Low.TextColor3 = Color3.fromRGB(255, 255, 255)
+Low.TextSize = 60
+Low.BackgroundTransparency = 0.5
+Low.MouseButton1Down:Connect(function()
+Frame.Visible = false
+end)
+
+Low2.Name = "Low2"
+Low2.Parent = Frame2
+Low2.Size = UDim2.new(0, 40, 0, 40)
+Low2.Position = UDim2.new(0, 0, 0, 0)
+Low2.Text = "-"
+Low2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Low2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Low2.TextSize = 60
+Low2.BackgroundTransparency = 0.5
+Low2.MouseButton1Down:Connect(function()
+Frame2.Visible = false
+end)
+
+TextLabel.Name = "TextLabel"
+TextLabel.Parent = Frame
+TextLabel.Size = UDim2.new(0, 260, 0, 40)
+TextLabel.Position = UDim2.new(0, 40, 0, 0)
+TextLabel.Text = "Dash Setting"
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 25
+TextLabel.BackgroundTransparency = 0.3
+
+TextLabel2.Name = "TextLabel2"
+TextLabel2.Parent = Frame
+TextLabel2.Size = UDim2.new(0, 100, 0, 40)
+TextLabel2.Position = UDim2.new(0, 10, 0, 93)
+TextLabel2.Text = "End time dash"
+TextLabel2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel2.TextSize = 12
+
+TextLabel3.Name = "TextLabel3"
+TextLabel3.Parent = Frame
+TextLabel3.Size = UDim2.new(0, 100, 0, 40)
+TextLabel3.Position = UDim2.new(0, 190, 0, 93)
+TextLabel3.Text = "Dash Power"
+TextLabel3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel3.TextSize = 13
+
+TextLabel4.Name = "TextLabel4"
+TextLabel4.Parent = Frame2
+TextLabel4.Size = UDim2.new(0, 260, 0, 40)
+TextLabel4.Position = UDim2.new(0, 40, 0, 0)
+TextLabel4.Text = "StopDash Setting"
+TextLabel4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel4.TextSize = 20
+TextLabel4.BackgroundTransparency = 0.3
+
+DashPower.Name = "Button"
+DashPower.Parent = Frame
+DashPower.Size = UDim2.new(0, 100, 0, 40)
+DashPower.Position = UDim2.new(0, 190, 0, 50)
+DashPower.Text = "70"
+DashPower.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DashPower.TextColor3 = Color3.fromRGB(255, 255, 255)
+DashPower.TextSize = 20
+
+EndTime.Name = "EndTime"
+EndTime.Parent = Frame
+EndTime.Size = UDim2.new(0, 100, 0, 40)
+EndTime.Position = UDim2.new(0, 10, 0, 50)
+EndTime.Text = "0.5"
+EndTime.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+EndTime.TextColor3 = Color3.fromRGB(255, 255, 255)
+EndTime.TextSize = 20
+
+Style.Name = "Style"
+Style.Parent = Frame
+Style.Size = UDim2.new(0, 100, 0, 40)
+Style.Position = UDim2.new(0, 10, 0, 140)
+Style.Text = "Humanoid"
+Style.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Style.TextColor3 = Color3.fromRGB(255, 255, 255)
+Style.TextSize = 16
+Style.MouseButton1Down:Connect(function()
+Camera.Visible = true
+Humanoid.Visible = true
+COOLDASH.Visible = true
+end)
+
+Humanoid.Name = "Humanoid"
+Humanoid.Parent = Frame
+Humanoid.Size = UDim2.new(0, 100, 0, 40)
+Humanoid.Position = UDim2.new(0, 10, 0, 220)
+Humanoid.Text = "Humanoid"
+Humanoid.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Humanoid.TextColor3 = Color3.fromRGB(255, 255, 255)
+Humanoid.TextSize = 16
+Humanoid.Visible = false
+Humanoid.MouseButton1Down:Connect(function()
+Humanoid.Visible = false
+Camera.Visible = false
+COOLDASH.Visible = false
+Style.Text = "Humanoid"
+end)
+
+Camera.Name = "Camera"
+Camera.Parent = Frame
+Camera.Size = UDim2.new(0, 100, 0, 40)
+Camera.Position = UDim2.new(0, 10, 0, 180)
+Camera.Text = "Camera"
+Camera.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Camera.TextColor3 = Color3.fromRGB(255, 255, 255)
+Camera.TextSize = 16
+Camera.Visible = false
+Camera.MouseButton1Down:Connect(function()
+Camera.Visible = false
+Humanoid.Visible = false
+COOLDASH.Visible = false
+Style.Text = "Camera"
+end)
+
+COOLDASH.Name = "TextButton"
+COOLDASH.Parent = Frame
+COOLDASH.Size = UDim2.new(0, 100, 0, 40)
+COOLDASH.Position = UDim2.new(0, 10, 0, 260)
+COOLDASH.Text = "CoolDash"
+COOLDASH.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+COOLDASH.TextColor3 = Color3.fromRGB(255, 255, 255)
+COOLDASH.TextSize = 16
+COOLDASH.Visible = false
+COOLDASH.MouseButton1Down:Connect(function()
+Camera.Visible = false
+Humanoid.Visible = false
+COOLDASH.Visible = false
+Style.Text = "CoolDash"
+end)
+
+SizeNumber4.Name = "SizeNumber4"
+SizeNumber4.Parent = Frame2
+SizeNumber4.Size = UDim2.new(0, 50, 0, 40)
+SizeNumber4.Position = UDim2.new(0, 10, 0, 50)
+SizeNumber4.Text = "100"
+SizeNumber4.ClearTextOnFocus = true
+SizeNumber4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SizeNumber4.TextColor3 = Color3.fromRGB(255, 255, 255)
+SizeNumber4.TextSize = 20
+SizeNumber4.Visible = true
+
+SizeNumber3.Name = "SizeNumber3"
+SizeNumber3.Parent = Frame2
+SizeNumber3.Size = UDim2.new(0, 50, 0, 40)
+SizeNumber3.Position = UDim2.new(0, 60, 0, 50)
+SizeNumber3.Text = "100"
+SizeNumber3.ClearTextOnFocus = true
+SizeNumber3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SizeNumber3.TextColor3 = Color3.fromRGB(255, 255, 255)
+SizeNumber3.TextSize = 20
+SizeNumber3.Visible = true
+
+SizeNumber2.Name = "SizeNumber2"
+SizeNumber2.Parent = Frame
+SizeNumber2.Size = UDim2.new(0, 50, 0, 40)
+SizeNumber2.Position = UDim2.new(0, 190, 0, 200)
+SizeNumber2.Text = "100"
+SizeNumber2.ClearTextOnFocus = true
+SizeNumber2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SizeNumber2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SizeNumber2.TextSize = 20
+SizeNumber2.Visible = true
+
+SizeNumber1.Name = "SizeNumber1"
+SizeNumber1.Parent = Frame
+SizeNumber1.Size = UDim2.new(0, 50, 0, 40)
+SizeNumber1.Position = UDim2.new(0, 240, 0, 200)
+SizeNumber1.Text = "100"
+SizeNumber1.ClearTextOnFocus = true
+SizeNumber1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SizeNumber1.TextColor3 = Color3.fromRGB(255, 255, 255)
+SizeNumber1.TextSize = 20
+SizeNumber1.Visible = true
+
+SetSize.Name = "SetSize"
+SetSize.Parent = Frame
+SetSize.Size = UDim2.new(0, 100, 0, 40)
+SetSize.Position = UDim2.new(0, 190, 0, 245)
+SetSize.Text = "SetSize"
+SetSize.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SetSize.TextColor3 = Color3.fromRGB(255, 255, 255)
+SetSize.TextSize = 20
+SetSize.Visible = true
+SetSize.MouseButton1Down:Connect(function()
+Dash.Size = UDim2.new(0,SizeNumber1.Text,0,SizeNumber2.Text)
+More.Position = UDim2.new(0,SizeNumber1.Text,0,0)
+end)
+
+SetSize2.Name = "SetSize2"
+SetSize2.Parent = Frame2
+SetSize2.Size = UDim2.new(0, 100, 0, 40)
+SetSize2.Position = UDim2.new(0, 10, 0, 100)
+SetSize2.Text = "SetSize"
+SetSize2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SetSize2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SetSize2.TextSize = 20
+SetSize2.Visible = true
+SetSize2.MouseButton1Down:Connect(function()
+StopDash.Size = UDim2.new(0,SizeNumber3.Text,0,SizeNumber4.Text)
+More2.Position = UDim2.new(0,SizeNumber3.Text,0,0)
+end)
+
+RemoveGui.Name = "RemoveGui"
+RemoveGui.Parent = Frame
+RemoveGui.Size = UDim2.new(0, 100, 0, 40)
+RemoveGui.Position = UDim2.new(0, 190, 0, 310)
+RemoveGui.Text = "Remove Gui"
+RemoveGui.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RemoveGui.TextColor3 = Color3.fromRGB(255, 0, 0)
+RemoveGui.TextSize = 13
+RemoveGui.MouseButton1Down:Connect(function()
+main:Destroy()
+end)
+
+RemoveGui2.Name = "RemoveGui2"
+RemoveGui2.Parent = Frame2
+RemoveGui2.Size = UDim2.new(0, 100, 0, 40)
+RemoveGui2.Position = UDim2.new(0, 10, 0, 150)
+RemoveGui2.Text = "Remove Gui"
+RemoveGui2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RemoveGui2.TextColor3 = Color3.fromRGB(255, 0, 0)
+RemoveGui2.TextSize = 13
+RemoveGui2.MouseButton1Down:Connect(function()
+main:Destroy()
+end)
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Credit";
+                Text = "This Script make by Red_BloxZ Thanks for using my script!";
+                Duration = 5;
+})
+
+wait(1)
+More.BackgroundTransparency = 0.5
+More2.BackgroundTransparency = 0.5
