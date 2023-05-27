@@ -1,0 +1,68 @@
+-- Create a ScreenGui and a Frame for the GUI
+local gui = Instance.new("ScreenGui")
+gui.Name = "InvisibilityGUI"
+gui.ResetOnSpawn = false
+gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 150, 0, 150)
+frame.Position = UDim2.new(0, 10, 0, 10)
+frame.BackgroundTransparency = 0.5
+frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+frame.Active = true
+frame.Draggable = true
+frame.Parent = gui
+
+-- Create a TextLabel for the heading
+local heading = Instance.new("TextLabel")
+heading.Size = UDim2.new(0, 130, 0, 20)
+heading.Position = UDim2.new(0, 10, 0, 10)
+heading.Text = "MADE BY SUPERSONIC GAMERZ"
+heading.TextColor3 = Color3.fromRGB(0, 255, 0)
+heading.BackgroundTransparency = 1
+heading.Font = Enum.Font.SourceSansBold
+heading.Parent = frame
+
+-- Create a TextBox for entering usernames
+local textBox = Instance.new("TextBox")
+textBox.Size = UDim2.new(0, 130, 0, 30)
+textBox.Position = UDim2.new(0, 10, 0, 40)
+textBox.PlaceholderText = "Enter username"
+textBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+textBox.BackgroundColor3 = Color3.fromRGB(0, 120, 0)
+textBox.Parent = frame
+
+-- Create a TextButton for toggling invisibility
+local button = Instance.new("TextButton")
+button.Size = UDim2.new(0, 130, 0, 30)
+button.Position = UDim2.new(0, 10, 0, 80)
+button.Text = "Toggle Invisibility"
+button.TextColor3 = Color3.fromRGB(255, 255, 255)
+button.BackgroundColor3 = Color3.fromRGB(0, 120, 0)
+button.Parent = frame
+
+-- Function to toggle invisibility
+local function toggleInvisibility()
+    local character = game.Players.LocalPlayer.Character
+    local username = textBox.Text
+    if character then
+        for _, part in ipairs(character:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.Transparency = 1 - part.Transparency
+            end
+        end
+    end
+    local player = game.Players:FindFirstChild(username)
+    if player and player.Character then
+        for _, part in ipairs(player.Character:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.Transparency = 1 - part.Transparency
+            end
+        end
+    end
+end
+
+-- Connect the button click event to the toggle function
+button.MouseButton1Click:Connect(toggleInvisibility)
