@@ -1,5 +1,5 @@
 --made by ScareCrowV3RM
-local xrayHotkey = Enum.KeyCode.E
+local xrayHotkey = Enum.KeyCode.M
 
 local uis = game:GetService("UserInputService")
 
