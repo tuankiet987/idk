@@ -1,4 +1,4 @@
-local offset = 5000
+llocal offset -1000
 local invisible = game.Players.LocalPlayer
 local grips = {}
 local heldTool
