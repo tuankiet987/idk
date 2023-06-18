@@ -27,7 +27,7 @@ title.Parent = main
 title.BackgroundColor3 = Color3.new(1, 0, 1)
 title.Size = UDim2.new(0, 332, 0, 31)
 title.Font = Enum.Font.GothamBold
-title.Text = "KMTSP GUI"
+title.Text = "Noclip GUI"
 title.TextColor3 = Color3.new(0, 0, 0)
 title.TextSize = 17
 
