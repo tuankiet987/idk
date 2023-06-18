@@ -33,7 +33,7 @@ title.TextSize = 17
 
 Headless.Name = "Headless"
 Headless.Parent = main
-Headless.BackgroundColor3 = Color3.new(0.333333, 1, 0)
+Headless.BackgroundColor3 = Color3.new(0.733, 18, 270)
 Headless.Position = UDim2.new(0.036144577, 0, 0.379146934, 0)
 Headless.Size = UDim2.new(0, 110, 0, 50)
 Headless.Font = Enum.Font.GothamBold
@@ -64,7 +64,7 @@ end)
 
 OneLeg.Name = "One Leg"
 OneLeg.Parent = main
-OneLeg.BackgroundColor3 = Color3.new(0.333333, 1, 0)
+OneLeg.BackgroundColor3 = Color3.new(0.733, 18, 270)
 OneLeg.Position = UDim2.new(0.614457846, 0, 0.379146934, 0)
 OneLeg.Size = UDim2.new(0, 110, 0, 50)
 OneLeg.Font = Enum.Font.GothamBold
