@@ -32,7 +32,7 @@ end
 handle = Instance.new("Part", workspace)
 handle.Name = "Handle"
 handle.Transparency = 0.7
-handle.CanCollide = false
+handle.CanCollide = true
 handle.Size = Vector3.new(2, 1, 1)
 weld = Instance.new("Weld", handle)
 weld.Part0 = handle
