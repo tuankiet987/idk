@@ -113,11 +113,4 @@ end
 )
 end
 end
---script made by Youtube: MrGabbe.   Discord: Mr_G_Curry #6982
-local infjmp = true
-game:GetService("UserInputService").jumpRequest:Connect(function()
-    if infjmp then
-        game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass"Humanoid":ChangeState("Jumping")
-    end
 end)
-)
