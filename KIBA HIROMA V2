@@ -1,0 +1,339 @@
+local lib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/Vape.txt")()
+
+local win = lib:Window("KIBA HIROMA V2",Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
+
+local tab = win:Tab("Main")
+
+tab:Button("Invisible gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Invisible%20Gui",true))()
+end)
+
+tab:Button("Fling gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt",true))()
+end)
+
+tab:Button("Fe save location", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/Tp%20Place%20GUI'),true))()
+end)
+
+tab:Button("fe Scp 173", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_nN0N66DHV2BjPwzYN59M17qSSlvJryM201CSC1sg07czxnZf48h9GHOFGd87G6Hh.lua.txt'),true))()
+end)
+
+tab:Button("inf jump", function()
+local gui = Instance.new("ScreenGui")
+gui.Name = "DraggableGUI"
+gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local frame = Instance.new("Frame")
+frame.Name = "DraggableFrame"
+frame.Size = UDim2.new(0, 200, 0, 100)
+frame.Position = UDim2.new(0, 100, 0, 100)
+frame.BackgroundTransparency = 0.4
+frame.BackgroundColor3 = Color3.new(0, 0, 0)
+frame.BorderSizePixel = 0
+frame.Active = true
+frame.Draggable = true
+frame.Parent = gui
+
+local button = Instance.new("TextButton")
+button.Name = "InfJumpButton"
+button.Size = UDim2.new(0.8, 0, 0, 30)
+button.Position = UDim2.new(0.1, 0, 0.5, -15)
+button.BackgroundColor3 = Color3.new(0, 0.5, 1)
+button.Font = Enum.Font.SourceSans
+button.TextColor3 = Color3.new(1, 1, 1)
+button.TextSize = 14
+button.Text = "InfJump"
+button.Parent = frame
+
+local label = Instance.new("TextLabel")
+label.Name = "CreatorLabel"
+label.Size = UDim2.new(0, 200, 0, 20)
+label.Position = UDim2.new(0, 0, 0, -20)
+label.BackgroundTransparency = 1
+label.Font = Enum.Font.SourceSansBold
+label.TextColor3 = Color3.new(1, 1, 1)
+label.TextSize = 14
+label.Text = "Made by IAB"
+label.Parent = frame
+
+local infiniteJumpEnabled = false
+
+local function onButtonClick()
+    infiniteJumpEnabled = not infiniteJumpEnabled
+    button.Text = infiniteJumpEnabled and "Disable InfJump" or "Enable InfJump"
+end
+
+button.MouseButton1Click:Connect(onButtonClick)
+
+game:GetService("UserInputService").JumpRequest:Connect(function()
+    if infiniteJumpEnabled then
+        game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
+    end
+end)
+end)
+
+tab:Button("Custom sit", function()
+loadstring(game:HttpGet(('https://pastefy.app/XKxQtK2K/raw'),true))()
+end)
+
+tab:Button("Invisible tool", function()
+loadstring(gane:HttpGet("https://raw.githubusercontent.com/tuankiet987/idk/main/tool%20invis",true))()
+end)
+
+tab:Button("fly pc", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tuankiet987/idk/main/Fly",true))()
+end)
+
+tab:Button("fly mobile", function()
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+end)
+
+tab:Button("anti fling", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tuankiet987/idk/main/Antifling",true))()
+end)
+
+tab:Button("Noclip Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tuankiet987/idk/main/NOCLIP",true))()
+end)
+
+tab:Button("Collision gui", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/Collision.txt'),true))()
+end)
+
+tab:Button("free gamepass gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tuankiet987/idk/main/free%20gamepass%20gui",true))()
+end)
+
+tab:Button("Fe r15 to r6", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Imagnir/r6_anims_for_r15/main/r6_anims.lua'),true))()
+end)
+
+tab:Button("Fe double jump", function()
+local UserInputService = game:GetService("UserInputService")
+local localPlayer = game.Players.LocalPlayer
+local character
+local humanoid
+ 
+local canDoubleJump = false
+local hasDoubleJumped = false
+local oldPowerlocal TIME_BETWEEN_JUMPS = 0.1
+local DOUBLE_JUMP_POWER_MULTIPLIER = 1.5
+
+function onJumpRequest()
+	if not character or not humanoid or not character:IsDescendantOf(workspace) or
+	 humanoid:GetState() == Enum.HumanoidStateType.Dead then
+		return
+	end
+ 
+	if canDoubleJump and not hasDoubleJumped then
+		hasDoubleJumped = true
+		humanoid.JumpPower = oldPower * DOUBLE_JUMP_POWER_MULTIPLIER		humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+	end
+end
+ 
+local function characterAdded(newCharacter)
+	character = newCharacter
+	humanoid = newCharacter:WaitForChild("Humanoid")
+	hasDoubleJumped = false
+	canDoubleJump = false
+	oldPower = humanoid.JumpPower 
+	humanoid.StateChanged:connect(function(old, new)
+		if new == Enum.HumanoidStateType.Landed then
+			canDoubleJump = false
+			hasDoubleJumped = false
+			humanoid.JumpPower = oldPower		elseif new == Enum.HumanoidStateType.Freefall then
+			wait(TIME_BETWEEN_JUMPS)			canDoubleJump = true
+		end
+	end)
+end
+ 
+if localPlayer.Character then
+	characterAdded(localPlayer.Character)
+end
+ 
+localPlayer.CharacterAdded:connect(characterAdded)
+UserInputService.JumpRequest:connect(onJumpRequest)
+end)
+
+tab:Button("Slient aim (can working some game)", function()
+local Camera = game:GetService("Workspace").CurrentCamera
+local Players = game:GetService("Players")
+local LocalPlayer = game:GetService("Players").LocalPlayer
+
+local function GetClosestPlayer()
+   local ClosestPlayer = nil
+   local FarthestDistance = math.huge
+
+   for i, v in pairs(Players.GetPlayers(Players)) do
+       if v ~= LocalPlayer and v.Character and v.Character.FindFirstChild(v.Character, "HumanoidRootPart") then
+           local DistanceFromPlayer = (LocalPlayer.Character.HumanoidRootPart.Position - v.Character.HumanoidRootPart.Position).Magnitude
+
+           if DistanceFromPlayer < FarthestDistance then
+               FarthestDistance = DistanceFromPlayer
+               ClosestPlayer = v
+           end
+       end
+   end
+
+   if ClosestPlayer then
+       return ClosestPlayer
+   end
+end
+
+local GameMetaTable = getrawmetatable(game)
+local OldGameMetaTableNamecall = GameMetaTable.__namecall
+setreadonly(GameMetaTable, false)
+
+GameMetaTable.__namecall = newcclosure(function(object, ...)
+   local NamecallMethod = getnamecallmethod()
+   local Arguments = {...}
+
+   if tostring(NamecallMethod) == "FindPartOnRayWithIgnoreList" then
+       local ClosestPlayer = GetClosestPlayer()
+       
+       if ClosestPlayer and ClosestPlayer.Character then
+           Arguments[1] = Ray.new(Camera.CFrame.Position, (ClosestPlayer.Character.Head.Position - Camera.CFrame.Position).Unit * (Camera.CFrame.Position - ClosestPlayer.Character.Head.Position).Magnitude)
+       end
+   end
+
+   return OldGameMetaTableNamecall(object, unpack(Arguments))
+end)
+
+setreadonly(GameMetaTable, true)
+end)
+
+tab:Toggle("Walk Speed",false, function(t)
+if t then
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+else
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+game.Players.LocalPlayer.Character.HumanoidJumpPower= 50
+end
+end)
+
+tab:Toggle("Esp",false, function(t)
+if t then
+local color = BrickColor.new(50,0,250)
+local transparency = .8
+
+local Players = game:GetService("Players")
+local function _ESP(c)
+  repeat wait() until c.PrimaryPart~= nil
+  for i,p in pairs(c:GetChildren()) do
+    if p.ClassName == "Part" or p.ClassName == "MeshPart" then
+      if p:FindFirstChild("shit") then p.shit:Destroy() end
+      local a = Instance.new("BoxHandleAdornment",p)
+      a.Name = "shit"
+      a.Size = p.Size
+      a.Color = color
+      a.Transparency = transparency
+      a.AlwaysOnTop = true    
+      a.Visible = true    
+      a.Adornee = p
+      a.ZIndex = true    
+
+    end
+  end
+end
+local function ESP()
+  for i,v in pairs(Players:GetChildren()) do
+    if v ~= game.Players.LocalPlayer then
+      if v.Character then
+        _ESP(v.Character)
+      end
+      v.CharacterAdded:Connect(function(chr)
+        _ESP(chr)
+      end)
+    end
+  end
+  Players.PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(function(chr)
+      _ESP(chr)
+    end)  
+  end)
+end
+ESP()
+else
+local color = BrickColor.new(50,0,250)
+local transparency = 1
+
+local Players = game:GetService("Players")
+local function _ESP(c)
+  repeat wait() until c.PrimaryPart ~= nil
+  for i,p in pairs(c:GetChildren()) do
+    if p.ClassName == "Part" or p.ClassName == "MeshPart" then
+      if p:FindFirstChild("shit") then p.shit:Destroy() end
+      local a = Instance.new("BoxHandleAdornment",p)
+      a.Name = "shit"
+      a.Size = p.Size
+      a.Color = color
+      a.Transparency = transparency
+      a.AlwaysOnTop = true    
+      a.Visible = true    
+      a.Adornee = p
+      a.ZIndex = true    
+
+    end
+  end
+end
+local function ESP()
+  for i,v in pairs(Players:GetChildren()) do
+    if v ~= game.Players.LocalPlayer then
+      if v.Character then
+        _ESP(v.Character)
+      end
+      v.CharacterAdded:Connect(function(chr)
+        _ESP(chr)
+      end)
+    end
+  end
+  Players.PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(function(chr)
+      _ESP(chr)
+    end)  
+  end)
+end
+ESP()
+end
+end)
+
+local tab = win:Tab("Admin")
+
+tab:Button("Infinite yield", function()
+loadstring(game:HttpGet("https://scriptblox.com/raw/Infinite-Yield_500",true))()
+end)
+
+tab:Button("nameless admin", function()
+loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Nameless-Admin-10833",true))()
+end)
+
+tab:Button("Reviz Admin", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tuankiet987/idk/main/Reviz%20admin",true))()
+end)
+
+tab:Button("admin panel", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tuankiet987/idk/main/Fe%20op%20trolling%20gui%20update"))()
+end)
+
+local tab = win:Tab("Keyboard")
+
+tab:Button("Keybind creator", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tuankiet987/idk/main/Keybind%20creator",true))()
+end)
+
+tab:Button("Keystrokes v2", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tuankiet987/idk/main/Keystrokes"))()
+end)
+
+tab:Button("Keyboard", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tuankiet987/idk/main/Keyboard"))()
+end)
+
+local changeclr = win:Tab("Color")
+
+changeclr:Colorpicker("Change UI Color",Color3.fromRGB(44, 120, 224), function(t)
+lib:ChangePresetColor(Color3.fromRGB(t.R * 255, t.G * 255, t.B * 255))
+end)
